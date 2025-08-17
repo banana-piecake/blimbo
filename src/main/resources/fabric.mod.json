@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "blimbo",
+  "version": "${version}",
+  "name": "blimbo",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/blimbo/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "blimbo.client.blimboDataGenerator"
+    ],
+    "client": [
+      "blimbo.client.blimboClient"
+    ],
+    "main": [
+      "blimbo"
+    ]
+  },
+  "mixins": [
+    "blimbo.mixins.json",
+    {
+      "config": "blimbo.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
