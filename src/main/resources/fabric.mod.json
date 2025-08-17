@@ -17,7 +17,7 @@
       "blimbo.client.blimboClient"
     ],
     "main": [
-      "blimbo"
+      "blimbo.blimbo"
     ]
   },
   "mixins": [
