@@ -32,7 +32,7 @@ public class ModItems {
 
 
         static {
-            CUSTOM_ITEM2= drink().consumeEffect(new ApplyEffectsConsumeEffect(List.of(new StatusEffectInstance(StatusEffects.STRENGTH, 600, 3), new StatusEffectInstance(StatusEffects.SPEED, 600, 3)))).build();
+            CUSTOM_ITEM2= drink().consumeEffect(new ApplyEffectsConsumeEffect(List.of(new StatusEffectInstance(StatusEffects.STRENGTH, 600, 3), new StatusEffectInstance(StatusEffects.SPEED, 600, 3), new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE, 1, 0)))).build();
         }
     }
 
@@ -50,7 +50,7 @@ public class ModItems {
         return Items.register(registerkey, factory, settings);
     }
 
-    public static final Item CUSTOM_ITEM = registerItem("custom_item", Item::new, new Item.Settings().food(FoodComponent.CUSTOM_ITEM2,ConsumableComponents.CUSTOM_ITEM2).useCooldown(3));
+    public static final Item CUSTOM_ITEM = registerItem("custom_item", Item::new, new Item.Settings().food(FoodComponent.CUSTOM_ITEM2,ConsumableComponents.CUSTOM_ITEM2).useCooldown(20));
 
     private static void customIngredients(FabricItemGroupEntries entries) {
         entries.add(CUSTOM_ITEM);
