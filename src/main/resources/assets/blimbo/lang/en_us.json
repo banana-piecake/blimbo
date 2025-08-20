@@ -1,3 +1,9 @@
 {
-  "item.blimbo.custom_item": "Sacrificial Artifact"
+  "item.blimbo.custom_item": "Sacrificial Artifact",
+  "item.blimbo.final_gambit": "Final Gambit",
+  "item.blimbo.totem_of_the_seas": "Totem Of The Seas",
+  "item.blimbo.beekeepers_totem": "Beekeeper's Totem",
+  "item.blimbo.thunderous_totem": "Thunderous Totem",
+  "item.blimbo.gambling_buddy": "Gambling Buddy",
+  "item.blimbo.blimbo": "Blimbo"
 }
