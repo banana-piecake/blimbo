@@ -57,7 +57,14 @@ public class ModItems {
     }
 
     public static final Item CUSTOM_ITEM = registerItem("custom_item", Item::new, new Item.Settings().food(FoodComponent.CUSTOM_ITEM2,ConsumableComponents.CUSTOM_ITEM2).useCooldown(20));
-    public static final Item WARDEN = registerItem("final_gambit", Item::new, new Item.Settings().food(FoodComponent.CUSTOM_ITEM2,ConsumableComponents.CUSTOM_ITEM2).useCooldown(20));
+    public static final Item WARDEN = registerItem(
+            "final_gambit",
+            Item::new,
+            new Item.Settings()
+                    .food(FoodComponent.CUSTOM_ITEM2, TotemFunctions.ConsumableComponents.MAHORAGA)
+                    .useCooldown(20)
+    );
+
     public static final Item HONEY = registerItem("beekeepers_totem", Item::new, new Item.Settings().food(FoodComponent.CUSTOM_ITEM2,ConsumableComponents.CUSTOM_ITEM2).useCooldown(20));
     public static final Item BLIMBO = registerItem("blimbo", Item::new, new Item.Settings().equippable(EquipmentSlot.HEAD));
     public static final Item GAMBLING = registerItem("gambling_buddy", Item::new, new Item.Settings().food(FoodComponent.CUSTOM_ITEM2,ConsumableComponents.CUSTOM_ITEM2).useCooldown(20));
