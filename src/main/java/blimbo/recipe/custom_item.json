@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "#": "minecraft:black_wool",
-    "X": "minecraft:light_grey_wool"
+    "#": "minecraft:redstone_block",
+    "X": "minecraft:iron_ingot",
   },
   "pattern": [
-    "X",
-    "###",
-    "xxx"
+    "XXX",
+    "X#X",
+    "XXX"
   ],
   "result": {
     "count": 1,

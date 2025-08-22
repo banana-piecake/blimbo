@@ -2,13 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "#": "minecraft:black_wool",
-    "X": "minecraft:light_grey_wool"
+    "#": "minecraft:lightning_rod",
+    "X": "minecraft:emerald",
+    "O": "minecraft:air"
   },
   "pattern": [
-    "X",
-    "###",
-    "xxx"
+    "O#O",
+    "#X#",
+    "O#O"
   ],
   "result": {
     "count": 1,

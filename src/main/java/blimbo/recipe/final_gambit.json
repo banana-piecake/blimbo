@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "#": "minecraft:black_wool",
-    "X": "minecraft:light_grey_wool",
+    "#": "minecraft:diamond",
+    "X": "minecraft:gold_ingot",
     "O": "minecraft:air"
   },
   "pattern": [
-    "OXO",
+    "XOX",
     "###",
-    "xxx"
+    "#O#"
   ],
   "result": {
     "count": 1,

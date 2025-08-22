@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "#": "minecraft:black_wool",
-    "X": "minecraft:light_grey_wool"
+    "#": "minecraft:pink_dye",
+    "X": "minecraft:air"
   },
   "pattern": [
-    "X",
     "###",
-    "xxx"
+    "###",
+    "#X#"
   ],
   "result": {
     "count": 1,
