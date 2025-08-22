@@ -66,11 +66,19 @@ public class ModItems {
                     .useCooldown(20)
     );
 
+
+    public static final Item LIGHTNING = registerItem(
+            "thunderous_totem",
+            Item::new,
+            new Item.Settings()
+                    .food(FoodComponent.CUSTOM_ITEM2, ThunderFunctions.ConsumableComponents.TTOTEM)
+                    .useCooldown(20)
+    );
+
     public static final Item HONEY = registerItem("beekeepers_totem", Item::new, new Item.Settings().food(FoodComponent.CUSTOM_ITEM2,ConsumableComponents.CUSTOM_ITEM2).useCooldown(20));
     public static final Item BLIMBO = registerItem("blimbo", Item::new, new Item.Settings().equippable(EquipmentSlot.HEAD));
     public static final Item GAMBLING = registerItem("gambling_buddy", Item::new, new Item.Settings().food(FoodComponent.CUSTOM_ITEM2,ConsumableComponents.CUSTOM_ITEM2).useCooldown(20));
     public static final Item WATER = registerItem("totem_of_the_seas", Item::new, new Item.Settings().sword(ToolMaterial.NETHERITE,6.5f,0.6f).useCooldown(20));
-    public static final Item LIGHTNING = registerItem("thunderous_totem", Item::new, new Item.Settings().food(FoodComponent.CUSTOM_ITEM2,ConsumableComponents.CUSTOM_ITEM2).useCooldown(20));
 
 
     private static void customIngredients(FabricItemGroupEntries entries) {
