@@ -2,11 +2,9 @@ package blimbo.items;
 
 import net.minecraft.component.type.ConsumableComponent;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LightningEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SpawnReason;
-import net.minecraft.entity.boss.WitherEntity;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.consume.ConsumeEffect;
 import net.minecraft.item.consume.UseAction;
@@ -17,8 +15,9 @@ import net.minecraft.world.World;
 
 public class ThunderFunctions {
 
-    // Helper builder for consumable items
-    public static ConsumableComponent.Builder summon() {
+    // Helper builder for consumable items.
+    // This method sets up the base properties for a consumable item.
+    public static ConsumableComponent.Builder thund() {
         return ConsumableComponent.builder()
                 .consumeSeconds(1.6F)
                 .useAction(UseAction.DRINK)
@@ -26,51 +25,66 @@ public class ThunderFunctions {
                 .consumeParticles(false);
     }
 
-    // All consumable components
+    // All consumable components are defined here.
     public static class ConsumableComponents {
-        public static final ConsumableComponent MAHORAGA;
+        public static final ConsumableComponent TTOTEM;
 
         static {
-            MAHORAGA = summon()
+            // Build the consumable component for the Thunder Totem.
+            TTOTEM = thund()
                     .consumeEffect(new ConsumeEffect() {
                         @Override
                         public Type<? extends ConsumeEffect> getType() {
-                            return null; // Not serializing this effect
+                            // This effect is not serializable, so we return null.
+                            // This is expected for transient effects.
+                            return null;
                         }
 
                         @Override
                         public boolean onConsume(World world, ItemStack stack, LivingEntity user) {
+                            // The if-check is crucial to ensure this code only runs on the server side.
+                            // This prevents duplicate effects and potential desyncs.
                             if (!world.isClient) {
-                                // --- Apply instant damage to the user ---
-                                user.addStatusEffect(new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE, 1, 10));
-
-
-                                // --- Spawn the Wither ---
+                                // Cast the world to ServerWorld to use server-specific methods.
                                 ServerWorld serverWorld = (ServerWorld) world;
 
-// Create the Wither entity
-                                WitherEntity wither = EntityType.WITHER.create(serverWorld, SpawnReason.EVENT);
+                                // Define the number of lightning bolts to spawn in the circle.
+                                final int lightningCount = 8;
+                                // Define the radius of the circle in blocks.
+                                final double radius = 1.3;
 
-                                if (wither != null) {
-                                    // Use BlockPos to ensure it spawns above the player and in free space
-                                    BlockPos spawnPos = user.getBlockPos().up(); // 1 block above player
-                                    if (!world.getBlockState(spawnPos).isAir()) {
-                                        spawnPos = spawnPos.up(1); // move- higher if needed
+                                // Loop to spawn multiple lightning bolts.
+                                for (int i = 0; i < lightningCount; i++) {
+                                    // Calculate the angle for each lightning bolt to be spaced evenly in a circle.
+                                    double angle = (360.0 / lightningCount) * i;
+                                    double radians = Math.toRadians(angle);
+
+                                    // Calculate the x and z coordinates for the new lightning bolt position
+                                    // based on the player's position and the radius.
+                                    double spawnX = user.getX() + radius * Math.cos(radians);
+                                    double spawnZ = user.getZ() + radius * Math.sin(radians);
+                                    double spawnY = user.getY();
+
+                                    // Create a new lightning bolt entity.
+                                    LightningEntity lightning = EntityType.LIGHTNING_BOLT.create(serverWorld, SpawnReason.EVENT);
+
+                                    // Check if the entity was created successfully to prevent errors.
+                                    if (lightning != null) {
+                                        // Set the exact position for the lightning bolt.
+                                        lightning.refreshPositionAndAngles(
+                                                spawnX,
+                                                spawnY,
+                                                spawnZ,
+                                                user.getYaw(),
+                                                user.getPitch()
+                                        );
+
+                                        // Add the lightning entity to the world.
+                                        serverWorld.spawnEntity(lightning);
                                     }
-
-                                    // Set the exact spawn position before spawning
-                                    wither.refreshPositionAndAngles(
-                                            spawnPos.getX() + 0.5,
-                                            spawnPos.getY(),
-                                            spawnPos.getZ() + 0.5,
-                                            user.getYaw(),
-                                            user.getPitch()
-                                    );
-
-                                    // Spawn the Wither
-                                    serverWorld.spawnEntity(wither);
                                 }
                             }
+                            // Return true to indicate that the item was successfully consumed.
                             return true;
                         }
                     })
