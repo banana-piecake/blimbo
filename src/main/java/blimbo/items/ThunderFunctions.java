@@ -49,9 +49,9 @@ public class ThunderFunctions {
                                 ServerWorld serverWorld = (ServerWorld) world;
 
                                 // Define the number of lightning bolts to spawn in the circle.
-                                final int lightningCount = 8;
+                                final int lightningCount = 36;
                                 // Define the radius of the circle in blocks.
-                                final double radius = 1.3;
+                                final double radius = 5;
 
                                 // Loop to spawn multiple lightning bolts.
                                 for (int i = 0; i < lightningCount; i++) {
