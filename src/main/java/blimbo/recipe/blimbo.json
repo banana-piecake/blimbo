@@ -6,8 +6,8 @@
     "X": "minecraft:air"
   },
   "pattern": [
-    "###",
-    "###",
+    "##X",
+    "##X",
     "#X#"
   ],
   "result": {
