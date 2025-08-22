@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "minecraft:iron_ingot",
+    "X": "minecraft:beehive",
+    "O": "minecraft:air"
+  },
+  "pattern": [
+    "O#O",
+    "#X#",
+    "O#O"
+  ],
+  "result": {
+    "count": 1,
+    "id": "blimbo:gambling_buddy"
+  }
+}

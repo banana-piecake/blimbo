@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "minecraft:black_wool",
+    "X": "minecraft:light_grey_wool",
+    "O": "minecraft:air"
+  },
+  "pattern": [
+    "OXO",
+    "###",
+    "xxx"
+  ],
+  "result": {
+    "count": 1,
+    "id": "blimbo:gambling_buddy"
+  }
+}
