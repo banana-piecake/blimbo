@@ -77,7 +77,7 @@ public class ModItems {
 
     public static final Item HONEY = registerItem("beekeepers_totem", Item::new, new Item.Settings().food(FoodComponent.CUSTOM_ITEM2,BeeFunctions.ConsumableComponents.BUMBLE).useCooldown(40));
     public static final Item BLIMBO = registerItem("blimbo", Item::new, new Item.Settings().equippable(EquipmentSlot.HEAD));
-    public static final Item GAMBLING = registerItem("gambling_buddy", Item::new, new Item.Settings().food(FoodComponent.CUSTOM_ITEM2,GamblingFunctions.ConsumableComponents.GAMBLE).useCooldown(5));
+    public static final Item GAMBLING = registerItem("gambling_buddy", Item::new, new Item.Settings().food(FoodComponent.CUSTOM_ITEM2,GamblingFunctions.ConsumableComponents.GAMBLE).useCooldown(3));
     public static final Item WATER = registerItem("totem_of_the_seas", Item::new, new Item.Settings().sword(ToolMaterial.NETHERITE,6.5f,0.6f));
 
 

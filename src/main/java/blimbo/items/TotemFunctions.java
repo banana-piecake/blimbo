@@ -20,7 +20,7 @@ public class TotemFunctions {
     // Helper builder for consumable items
     public static ConsumableComponent.Builder summon() {
         return ConsumableComponent.builder()
-                .consumeSeconds(1.6F)
+                .consumeSeconds(0.4F)
                 .useAction(UseAction.DRINK)
                 .sound(SoundEvents.ENTITY_ITEM_BREAK)
                 .consumeParticles(false);

@@ -23,7 +23,7 @@ public class BeeFunctions {
     // This method sets up the base properties for a consumable item.
     public static ConsumableComponent.Builder bumble() {
         return ConsumableComponent.builder()
-                .consumeSeconds(1.6F)
+                .consumeSeconds(0.4F)
                 .useAction(UseAction.DRINK)
                 .sound(SoundEvents.ENTITY_ITEM_BREAK)
                 .consumeParticles(false);
