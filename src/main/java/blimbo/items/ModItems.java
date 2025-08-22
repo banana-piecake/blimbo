@@ -32,7 +32,7 @@ public class ModItems {
 
 
     public static ConsumableComponent.Builder drink() {
-        return ConsumableComponent.builder().consumeSeconds(1.6F).useAction(UseAction.DRINK).sound(SoundEvents.ENTITY_ITEM_BREAK).consumeParticles(false);
+        return ConsumableComponent.builder().consumeSeconds(0.4F).useAction(UseAction.DRINK).sound(SoundEvents.ENTITY_ITEM_BREAK).consumeParticles(false);
     }
     public class ConsumableComponents {
         public static final ConsumableComponent CUSTOM_ITEM2;
