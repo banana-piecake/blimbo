@@ -55,7 +55,7 @@ public class TotemFunctions {
                                     // Use BlockPos to ensure it spawns above the player and in free space
                                     BlockPos spawnPos = user.getBlockPos().up(); // 1 block above player
                                     if (!world.getBlockState(spawnPos).isAir()) {
-                                        spawnPos = spawnPos.up(1); // move higher if needed
+                                        spawnPos = spawnPos.up(1); // move- higher if needed
                                     }
 
                                     // Set the exact spawn position before spawning
