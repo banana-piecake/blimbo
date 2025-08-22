@@ -57,13 +57,13 @@ public class ModItems {
         return Items.register(registerkey, factory, settings);
     }
 
-    public static final Item CUSTOM_ITEM = registerItem("custom_item", Item::new, new Item.Settings().food(FoodComponent.CUSTOM_ITEM2,ConsumableComponents.CUSTOM_ITEM2).useCooldown(20));
+    public static final Item CUSTOM_ITEM = registerItem("custom_item", Item::new, new Item.Settings().food(FoodComponent.CUSTOM_ITEM2,ConsumableComponents.CUSTOM_ITEM2).useCooldown(35));
     public static final Item WARDEN = registerItem(
             "final_gambit",
             Item::new,
             new Item.Settings()
                     .food(FoodComponent.CUSTOM_ITEM2, TotemFunctions.ConsumableComponents.MAHORAGA)
-                    .useCooldown(20)
+                    .useCooldown(40)
     );
 
 
@@ -72,13 +72,13 @@ public class ModItems {
             Item::new,
             new Item.Settings()
                     .food(FoodComponent.CUSTOM_ITEM2, ThunderFunctions.ConsumableComponents.TTOTEM)
-                    .useCooldown(20)
+                    .useCooldown(30)
     );
 
-    public static final Item HONEY = registerItem("beekeepers_totem", Item::new, new Item.Settings().food(FoodComponent.CUSTOM_ITEM2,BeeFunctions.ConsumableComponents.BUMBLE).useCooldown(20));
+    public static final Item HONEY = registerItem("beekeepers_totem", Item::new, new Item.Settings().food(FoodComponent.CUSTOM_ITEM2,BeeFunctions.ConsumableComponents.BUMBLE).useCooldown(40));
     public static final Item BLIMBO = registerItem("blimbo", Item::new, new Item.Settings().equippable(EquipmentSlot.HEAD));
-    public static final Item GAMBLING = registerItem("gambling_buddy", Item::new, new Item.Settings().food(FoodComponent.CUSTOM_ITEM2,ConsumableComponents.CUSTOM_ITEM2).useCooldown(20));
-    public static final Item WATER = registerItem("totem_of_the_seas", Item::new, new Item.Settings().sword(ToolMaterial.NETHERITE,6.5f,0.6f).useCooldown(20));
+    public static final Item GAMBLING = registerItem("gambling_buddy", Item::new, new Item.Settings().food(FoodComponent.CUSTOM_ITEM2,ConsumableComponents.CUSTOM_ITEM2).useCooldown(5));
+    public static final Item WATER = registerItem("totem_of_the_seas", Item::new, new Item.Settings().sword(ToolMaterial.NETHERITE,6.5f,0.6f));
 
 
     private static void customIngredients(FabricItemGroupEntries entries) {
