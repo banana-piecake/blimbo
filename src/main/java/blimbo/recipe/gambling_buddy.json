@@ -3,11 +3,10 @@
   "category": "equipment",
   "key": {
     "#": "minecraft:black_wool",
-    "X": "minecraft:light_grey_wool",
-    "O": "minecraft:air"
+    "X": "minecraft:light_grey_wool"
   },
   "pattern": [
-    "0X0",
+    " X ",
     "###",
     "XXX"
   ],

@@ -3,13 +3,12 @@
   "category": "equipment",
   "key": {
     "#": "minecraft:lightning_rod",
-    "X": "minecraft:emerald",
-    "O": "minecraft:air"
+    "X": "minecraft:emerald"
   },
   "pattern": [
-    "O#O",
+    " # ",
     "#X#",
-    "O#O"
+    " # "
   ],
   "result": {
     "count": 1,

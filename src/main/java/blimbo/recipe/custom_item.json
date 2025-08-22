@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "#": "minecraft:redstone_block",
-    "X": "minecraft:iron_ingot",
+    "X": "minecraft:iron_ingot"
   },
   "pattern": [
     "XXX",

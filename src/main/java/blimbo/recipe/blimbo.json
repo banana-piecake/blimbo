@@ -2,13 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "#": "minecraft:pink_dye",
-    "X": "minecraft:air"
+    "#": "minecraft:pink_dye"
   },
   "pattern": [
-    "##X",
-    "##X",
-    "#X#"
+    "## ",
+    "## ",
+    "# #"
   ],
   "result": {
     "count": 1,

@@ -3,13 +3,12 @@
   "category": "equipment",
   "key": {
     "#": "minecraft:iron_ingot",
-    "X": "minecraft:beehive",
-    "O": "minecraft:air"
+    "X": "minecraft:beehive"
   },
   "pattern": [
-    "O#O",
+    " # ",
     "#X#",
-    "O#O"
+    " # "
   ],
   "result": {
     "count": 1,

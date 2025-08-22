@@ -3,13 +3,12 @@
   "category": "equipment",
   "key": {
     "#": "minecraft:diamond",
-    "X": "minecraft:gold_ingot",
-    "O": "minecraft:air"
+    "X": "minecraft:gold_ingot"
   },
   "pattern": [
-    "XOX",
+    "X X",
     "###",
-    "#O#"
+    "# #"
   ],
   "result": {
     "count": 1,

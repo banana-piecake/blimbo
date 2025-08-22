@@ -3,13 +3,12 @@
   "category": "equipment",
   "key": {
     "#": "minecraft:breeze_rod",
-    "X": "minecraft:diamond",
-    "O": "minecraft:air"
+    "X": "minecraft:diamond"
   },
   "pattern": [
-    "OXX",
-    "O#X",
-    "#OO"
+    " XX",
+    " #X",
+    "#  "
   ],
   "result": {
     "count": 1,
