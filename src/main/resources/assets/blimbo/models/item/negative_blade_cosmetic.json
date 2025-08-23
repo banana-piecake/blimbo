@@ -1,0 +1,26 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "blimbo:item/negative_blade_cosmetic"
+  },
+  "display": {
+    "thirdperson_head": {
+      "scale": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        -2.0,
+        0
+      ]
+    }
+    }
+  }
+}
