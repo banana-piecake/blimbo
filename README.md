@@ -5,7 +5,7 @@ has some code for consumebles
 
 
 all items with a function are consumbles with their own unique cooldowns
-Totemic is a mod based around "totems" (consumble items with various abilities) and some other misc cosmetic items, along with one weapon, the mod aims to change pvp via consumbles, and encourage players to take risks, as most items can damage the user, while attmpting to add some fun and silly mechanics :3 
+Totemicy is a mod based around "totems" (consumble items with various abilities) and some other misc cosmetic items, along with one weapon, the mod aims to change pvp via consumbles, and encourage players to take risks, as most items can damage the user, while attmpting to add some fun and silly mechanics :3 
 this is my first mod so I hope people enjoy it! 
 
 items:
