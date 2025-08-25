@@ -1,3 +1,6 @@
+<img width="3072" height="384" alt="totemic title (1)" src="https://github.com/user-attachments/assets/0ab033df-927d-4b49-8e5f-16b17c4ca1e0" />
+
+
 HI
 this is my very first mod
 has some code for consumebles
