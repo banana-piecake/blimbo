@@ -14,7 +14,7 @@ public class SeaTridentItem extends Item {
     }
 
     public ActionResult use(World world, PlayerEntity user, Hand hand) {
-        Vec3d movementVector = new Vec3d(0, 5, 0);
+        Vec3d movementVector = new Vec3d(0, 300, 0);
         user.travel(movementVector);
         return ActionResult.SUCCESS;
     }
