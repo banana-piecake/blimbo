@@ -15,8 +15,8 @@ public class ShoutItem extends Item {
 
     public ActionResult use(World world, PlayerEntity user, Hand hand) {
         Vec3d movementVector = user.getRotationVector();
-        Vec3d dashVector = movementVector.multiply(6.0);
-        Vec3d upVector = new Vec3d(0,2,0);
+        Vec3d dashVector = movementVector.multiply(10.0);
+        Vec3d upVector = new Vec3d(0,1,0);
         user.addVelocity(dashVector);
         user.addVelocity(upVector);
         return ActionResult.SUCCESS;
