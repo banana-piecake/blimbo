@@ -37,8 +37,8 @@ public class ShoutItem extends Item {
         );
 
         for (Entity entity : nearbyEntities) {
-            user.addVelocity(dashVector);
-            user.addVelocity(upVector);
+            entity.addVelocity(dashVector);
+            entity.addVelocity(upVector);
         }
         return ActionResult.SUCCESS;
     }
