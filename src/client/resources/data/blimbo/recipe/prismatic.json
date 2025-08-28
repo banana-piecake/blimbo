@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "minecraft:lapis_lazuli",
+    "P": "minecraft:iron_nugget",
+    "X": "minecraft:diamond"
+  },
+  "pattern": [
+    " #P",
+    "#X#",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "blimbo:prismatic"
+  }
+}
