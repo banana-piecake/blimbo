@@ -81,7 +81,7 @@ public class ModItems {
     public static final Item SPEAR = registerItem("amethyst_spear_cosmetic", Item::new, new Item.Settings());
     public static final Item GAMBLING = registerItem("gambling_buddy", Item::new, new Item.Settings().food(FoodComponent.CUSTOM_ITEM2,GamblingFunctions.ConsumableComponents.GAMBLE).useCooldown(3));
     public static final Item WATER = registerItem("totem_of_the_seas", SeaTridentItem::new, new Item.Settings().sword(ToolMaterial.NETHERITE,4.5f,0.25f).useCooldown(7.0F));
-
+    public static final Item SHOUT = registerItem("shout", ShoutItem::new, new Item.Settings().useCooldown(5));
 
     private static void customIngredients(FabricItemGroupEntries entries) {
         entries.add(CUSTOM_ITEM);
@@ -93,6 +93,7 @@ public class ModItems {
         entries.add(LIGHTNING);
         entries.add(NEGATIVE);
         entries.add(SPEAR);
+        entries.add(SHOUT);
     }
 
 
