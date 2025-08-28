@@ -16,7 +16,7 @@ public class PrismTridentItem extends Item {
 
     public ActionResult use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
-        user.useRiptide(200,5, stack);
+        user.useRiptide(600,15, stack);
         return ActionResult.SUCCESS;
     }
 }
