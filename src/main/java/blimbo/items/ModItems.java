@@ -80,9 +80,10 @@ public class ModItems {
     public static final Item NEGATIVE = registerItem("negative_blade_cosmetic", Item::new, new Item.Settings());
     public static final Item SPEAR = registerItem("amethyst_spear_cosmetic", Item::new, new Item.Settings());
     public static final Item GAMBLING = registerItem("gambling_buddy", Item::new, new Item.Settings().food(FoodComponent.CUSTOM_ITEM2,GamblingFunctions.ConsumableComponents.GAMBLE).useCooldown(3));
-    public static final Item WATER = registerItem("totem_of_the_seas", SeaTridentItem::new, new Item.Settings().sword(ToolMaterial.NETHERITE,4.5f,0.25f).useCooldown(7.0F));
+    public static final Item WATER = registerItem("totem_of_the_seas", SeaTridentItem::new, new Item.Settings().sword(ToolMaterial.NETHERITE,4.5f,-2.6f).useCooldown(7.0F));
     public static final Item SHOUT = registerItem("shout", ShoutItem::new, new Item.Settings().useCooldown(5));
     public static final Item PRISMATIC = registerItem("prismatic", PrismTridentItem::new, new Item.Settings().useCooldown(5));
+    public static final Item SWARD = registerItem("watermelon_sword", Item::new, new Item.Settings().sword(ToolMaterial.WOOD,5.7f, -2.2f).food(new net.minecraft.component.type.FoodComponent(7,7,true)));
 
     private static void customIngredients(FabricItemGroupEntries entries) {
         entries.add(CUSTOM_ITEM);
@@ -96,6 +97,7 @@ public class ModItems {
         entries.add(SPEAR);
         entries.add(SHOUT);
         entries.add(PRISMATIC);
+        entries.add(SWARD);
     }
 
 
