@@ -14,16 +14,18 @@ public class VampItem extends Item {
 
     public void postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (attacker instanceof PlayerEntity player) {
-            player.heal(3f);
 
-            player.getWorld().playSound(
-                    null,
-                    player.getBlockPos(),
-                    net.minecraft.sound.SoundEvents.ENTITY_PHANTOM_SWOOP,
-                    net.minecraft.sound.SoundCategory.PLAYERS,
-                    1.0F,
-                    0.7F
-            );
+                player.heal(3f);
+
+                player.getWorld().playSound(
+                        null,
+                        player.getBlockPos(),
+                        net.minecraft.sound.SoundEvents.ENTITY_GHAST_SCREAM,
+                        net.minecraft.sound.SoundCategory.PLAYERS,
+                        1.0F,   // volume
+                        0.3F    // pitch (lower for creepier effect)
+                );
+            }
         }
     }
 }
