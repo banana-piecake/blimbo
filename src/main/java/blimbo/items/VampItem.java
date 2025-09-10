@@ -13,6 +13,8 @@ public class VampItem extends Item {
     }
 
     public void postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        target.addDeathParticles();
+
         if (attacker instanceof PlayerEntity player) {
 
                 player.heal(3f);
