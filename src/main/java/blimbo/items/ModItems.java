@@ -84,11 +84,15 @@ public class ModItems {
     public static final Item SHOUT = registerItem("shout", ShoutItem::new, new Item.Settings().useCooldown(5));
     public static final Item PRISMATIC = registerItem("prismatic", PrismTridentItem::new, new Item.Settings().useCooldown(5));
     public static final Item SWARD = registerItem("watermelon_sword", Item::new, new Item.Settings().sword(ToolMaterial.WOOD,5.7f, -2.2f).food(new net.minecraft.component.type.FoodComponent(7,7,true)));
+    public static final Item VAMP = registerItem("vamp", Item::new, new Item.Settings().sword(ToolMaterial.STONE,4.7f, -2.2f));
+    public static final Item NAIL = registerItem("nail", NailItem::new, new Item.Settings().sword(ToolMaterial.IRON,5.7f, -2.2f));
 
     private static void customIngredients(FabricItemGroupEntries entries) {
         entries.add(CUSTOM_ITEM);
         entries.add(WARDEN);
         entries.add(HONEY);
+        entries.add(NAIL);
+        entries.add(VAMP);
         entries.add(BLIMBO);
         entries.add(GAMBLING);
         entries.add(WATER);
