@@ -17,9 +17,15 @@ public class NailItem extends Item {
 
     public void postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (attacker instanceof PlayerEntity player) {
-            Vec3d dashVector = attacker.getRotationVector().multiply(-0.7);
-            player.addVelocity(dashVector);
-            player.velocityModified = true; // <--- tells the server to sync velocity with client
+            Vec3d dashVector = attacker.getRotationVector().multiply(-0.5);
+
+            // add horizontal velocity
+            player.addVelocity(dashVector.x, 0, dashVector.z);
+
+            // overwrite vertical velocity
+            player.setVelocity(player.getVelocity().x, dashVector.y, player.getVelocity().z);
+
+            player.velocityModified = true;
         }
     }
 }
