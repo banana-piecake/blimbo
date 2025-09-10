@@ -16,8 +16,15 @@ public class NailItem extends Item {
     }
 
     public void postDamageEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        Vec3d movementVector = target.getRotationVector();
-        Vec3d dashVector = movementVector.multiply(3.0);
-        target.addVelocity(dashVector);
+        System.out.println("postDamageEntity called!");
+        if (attacker != null) {
+            System.out.println("Attacker is not null. Attacker's name: " + attacker.getName().getString());
+            Vec3d movementVector = attacker.getRotationVector();
+            Vec3d dashVector = movementVector.multiply(3.0);
+            attacker.addVelocity(dashVector);
+            System.out.println("Added velocity to attacker: " + dashVector);
+        } else {
+            System.out.println("Attacker is null!");
+        }
     }
 }
