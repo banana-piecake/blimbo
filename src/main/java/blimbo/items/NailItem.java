@@ -17,7 +17,7 @@ public class NailItem extends Item {
 
     public void postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (attacker instanceof PlayerEntity player) {
-            Vec3d dashVector = attacker.getRotationVector().multiply(-0.3);
+            Vec3d dashVector = attacker.getRotationVector().multiply(-0.7);
             player.addVelocity(dashVector);
             player.velocityModified = true; // <--- tells the server to sync velocity with client
         }
